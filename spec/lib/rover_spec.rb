@@ -13,18 +13,18 @@ describe Rover do
     end
 
     specify "when command is 'L' it should turn left" do
-      Moves::Left.should_receive(:move)
-      rover.command('L')
+      expect { rover.command('L') }.to change(rover, :compass).to('W')
+      expect { rover.command('L') }.not_to change(rover, :location)
     end
 
     specify "when command is 'L' it should turn left" do
-      Moves::Right.should_receive(:move)
-      rover.command('R')
+      expect { rover.command('R') }.to change(rover, :compass).to('E')
+      expect { rover.command('R') }.not_to change(rover, :location)
     end
 
     specify "when command is 'M' it should move forward" do
-      Moves::Forward.should_receive(:move)
-      rover.command('M')
+      expect { rover.command('M') }.to change(rover, :location).to([1, 3])
+      expect { rover.command('M') }.not_to change(rover, :compass)
     end
   end
 

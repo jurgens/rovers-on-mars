@@ -10,6 +10,6 @@ class Position
   end
 
   def location
-    [@x, @y]
+    [x, y]
   end
 end

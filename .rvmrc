@@ -1,2 +1,2 @@
-rvm use 1.9.3-p327-perf@rovers --create
+rvm use ruby-2.0.0-p0@rovers --create
 

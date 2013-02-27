@@ -1,4 +1,4 @@
-module Moves
+module Movement
   class Forward
     def self.move(position)
       new_position = position.clone

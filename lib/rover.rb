@@ -31,6 +31,6 @@ class Rover
   def move_factory(command)
     raise 'Unknown command' unless COMMAND_VALUES.include?(command)
     commands = {'L' => 'Left', 'R' => 'Right', 'M' => 'Forward'}
-    "Moves::#{commands[command]}".constantize
+    "Movement::#{commands[command]}".constantize
   end
 end
